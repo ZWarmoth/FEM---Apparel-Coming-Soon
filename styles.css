@@ -4,15 +4,20 @@
     --darkGrayRed: hsl(0, 6%, 24%);
 }
 
-html, body, main, header {
-    
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Josefin Sans', sans-serif;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+   
 }
 
 
@@ -30,14 +35,17 @@ body {
     
 
 .container {
-    width: 100vw;
-    height: 100vh;
-    
-    
+    width: 375px;
+    background-size: cover;  
 }
+
+.main-content {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .main-img {
-    width: 100%;
-    object-fit: contain;
+    margin-bottom: 50px;
 }
 
 div > h1 > span {
@@ -128,75 +136,34 @@ div > h1 > span {
     margin: 1rem 0 0 2rem;
 }
 
-@media (min-width: 1030px) {
-    .container {
-        background-image: url(./images/bg-pattern-desktop.svg);
-        background-repeat: no-repeat;
-        background-position: bottom left;
-        justify-content: space-between;
-        padding-left: 10rem;
-        height: 100vh;
+@media (min-width: 1000px) {
+    body {
+        width: 100%;
     }
 
     .img-logo {
-        margin-top: 4.5rem;
+        position: absolute;
+        transform: translate(-540px, 50px);
+    }
+
+    .main-content {
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-right: 50px;
+        margin-top: 150px;
+        width: 500px;
     }
 
     .main-img {
-        height: 100vh;
-        margin-top: 0;
+        margin-bottom: 20px;
     }
 
-    #coming-soon {
-        max-width: 27rem;
-        text-align: left;
-        padding-inline: 0;
-        font-size: 64px;
-        line-height: 70px;
-        letter-spacing: 17px;
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
-    div > h1 > span {
-        line-height: 64px;
-    }
 
-    #main-info {
-        max-width: 27rem;
-        margin-right: 2rem;
-        text-align: left;
-        font-size: 16px;
-        line-height: 28px;
-    }
-
-    #form {
-        max-width: 27rem;
-        justify-self: start;
-        width: 445px;
-        height: 56px;
-    }
-
-    #email {
-        width: 445px;
-        height: 56px;
-        font-size: 16px;
-        line-height: 28px;
-    }
-
-    #email::placeholder{
-        font-size: 16px;
-        text-indent: 1.5rem;
-    }
-
-    .email-submit {
-        width: 100px;
-        height: 56px;
-    }
-    .email-submit > #icon-arrow {
-        padding-left: 3rem;
-    }
-    .email-submit > #icon-error {
-        top: 17px;
-        right: 6.8rem;
-    }
 
 }

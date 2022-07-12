@@ -19,29 +19,34 @@
     
     <main>
         <div class="container">
+            <div class="main-content">
+                <div class="main-img-container">
+                    <img class="main-img"
+                        srcset="
+                        ./images/hero-desktop.jpg 1000px"
+                        src="./images/hero-mobile.jpg"
+                        alt="girl posing in a fashionable way"
+                    >
+                </div>
 
-            <div class="main-img-container">
-                <img class="main-img""  src="./images/hero-mobile.jpg" alt="girl posing in a fashionable way">
-            </div>
+                <div class="coming-soon">
+                    <h1 id="coming-soon">
+                        <span>WE'RE<b></span>
+                        COMING<br>SOON
+                    </h1>
+                </div>
+                <div id="main-info">
+                    <p id="info">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+                </div>
 
-            <div class="coming-soon">
-                <h1 id="coming-soon">
-                    <span>WE'RE<b></span>
-                    COMING<br>SOON
-                </h1>
+                <div class="email-capture">
+                    <form id ="form" action="" onsubmit="return checkEmail()" novalidate>
+                        <input class="email-input" type="email" id="email" name="email" placeholder="Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        <button class="email-submit" type="submit"><img id="icon-error" src="./images/icon-error.svg" alt="icon-error"><img id ="icon-arrow" src="./images/icon-arrow.svg"></button>
+                        <p id="error"></p>
+                    </form>
+                </div>
             </div>
-            <div id="main-info">
-                <p id="info">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-            </div>
-
-            <div class="email-capture">
-                <form id ="form" action="" onsubmit="return checkEmail()" novalidate>
-                    <input class="email-input" type="email" id="email" name="email" placeholder="Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                    <button class="email-submit" type="submit"><img id="icon-error" src="./images/icon-error.svg" alt="icon-error"><img id ="icon-arrow" src="./images/icon-arrow.svg"></button>
-                    <p id="error"></p>
-                </form>
-            </div>
-
 
         </div>
     </main>
